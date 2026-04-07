@@ -1,4 +1,5 @@
 💳 Credit Card Fraud Detection & Risk Analysis
+
 📌 Project Overview
 This project addresses the critical challenge of identifying fraudulent financial transactions in a highly imbalanced environment. Using a dataset of 284,807 transactions with a fraud rate of only 0.17%, I developed a machine learning solution that prioritizes "Recall" to ensure 4 out of 5 fraudulent activities are captured, while providing a risk-based alert system for manual review teams.
 
