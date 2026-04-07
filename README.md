@@ -2,50 +2,91 @@
 📌 Project Overview
 This project addresses the critical challenge of identifying fraudulent financial transactions in a highly imbalanced environment. Using a dataset of 284,807 transactions with a fraud rate of only 0.17%, I developed a machine learning solution that prioritizes "Recall" to ensure 4 out of 5 fraudulent activities are captured, while providing a risk-based alert system for manual review teams.
 
-📊 Interactive Risk Dashboard
-To provide business-level visibility, I designed an interactive Power BI Dashboard with a modern Glassmorphism aesthetic.
+🎯 Business Problem
 
-![Fraud Detection Analysis Dashboard]
-<img width="1444" height="810" alt="Screenshot 2026-04-06 165422" src="https://github.com/user-attachments/asset![Uploading Screenshot 2026-04-06 165422.png…]()
-s/8623ff47-55b6-4e8a-8bf5-8d0a897a7359" />
+Financial institutions process thousands of transactions daily, but only a very small fraction (~0.3%) are fraudulent.
 
-Figure 1: Risk Tier Analysis, Temporal Fraud Trends, and Model Performance Overview.
+👉 This creates a major challenge:
 
-🛠️ Technical Stack
-Language: Python (Pandas, NumPy)
+High class imbalance
+Risk of missing fraud cases
+Excessive false alerts affecting customer experience
 
-Machine Learning: Scikit-learn, SMOTE (Synthetic Minority Oversampling Technique)
+💡 Solution Approach
+Performed data cleaning & preprocessing
+Handled class imbalance problem
+Built risk-tier classification (Low → Critical)
+Designed an interactive dashboard for fraud monitoring
+Focused on actionable insights instead of just model output
 
-Visualization: Power BI (DAX, Neon UI Design), Matplotlib, Seaborn
+📊 Dashboard Highlights
+🔢 Key KPIs
+30 Fraud Cases Detected
+10,000 Total Transactions
+Imbalance Ratio: 1 : 343
+Average Fraud Amount: $91.49
 
-Database: SQL (Data Discovery & Validation)
+⏱ Fraud Trend Analysis
+Fraud peaks observed at specific hours
+Helps identify suspicious activity windows
 
-🚀 STAR Methodology (Project Deep-Dive)
-Situation
-The dataset was extremely skewed (578:1 ratio of legitimate to fraudulent transactions). Standard accuracy was a "trap"—a model could be 99.8% accurate while failing to catch a single fraud case.
+📈 Transaction Distribution
+Majority transactions are normal (~99.7%)
+Fraud forms a very small but critical segment
 
-Task
-Develop a classification system that handles extreme imbalance, maximizes Recall (to catch fraud), and categorizes transactions into actionable risk tiers for the operations team.
+💰 Fraud by Amount
+Most fraud cases fall in low-to-mid transaction ranges
+Indicates micro-fraud strategies
 
-Action
-Preprocessing: Cleaned and scaled 30 PCA-transformed features using Python.
+⚠ Risk Tier Segmentation
 
-Handling Imbalance: Implemented SMOTE to oversample the minority class, ensuring the model learned fraud patterns effectively.
+Transactions classified into:
 
-Modeling: Built a Random Forest classifier, tuning hyperparameters to optimize for the F1-score and Recall.
+🔴 Critical Risk
+🟠 High Risk
+🟡 Medium Risk
+🟢 Low Risk
 
-UI/UX Design: Developed a 4-tier risk classification (Low, Medium, High, Critical) and visualized it in a sleek, dark-mode Power BI dashboard.
+👉 Helps prioritize investigation efficiently
 
-Result
-Recall Improvement: Boosted fraud detection recall from 61% to 81.6%.
+🛠 Tools & Technologies
+Python (Pandas, NumPy)
+Scikit-learn (Fraud Detection Modeling)
+SMOTE (Handling Imbalanced Data)
+Power BI (Dashboard & Visualization)
+SQL (Data Analysis)
 
-Precision: Maintained a high precision of 94.1% to minimize false positives.
+📌 Key Insights
+Fraud cases are highly imbalanced, requiring special handling
+Certain time periods show higher fraud probability
+Small-value transactions can still be high-risk
+Risk segmentation can reduce manual workload by ~60%
 
-Business Impact: The automated risk-tier system is projected to reduce the manual fraud review workload by ~60%.
+🚀 Business Impact
 
-📈 Key Insights & Features
-Fraud by Hour: Identified specific time windows where fraudulent activity spikes, allowing for targeted security monitoring.
+✔ Faster fraud detection
+✔ Reduced financial loss
+✔ Improved decision-making
+✔ Scalable monitoring system
 
-Amount Bins: Discovered that while fraud occurs at all levels, a significant volume of "High Risk" cases occurs in specific low-to-mid value transaction brackets.
+📁 Project Structure
+📦 Fraud-Detection-Dashboard
+ ┣ 📊 Dashboard.pbix
+ ┣ 📁 Data
+ ┣ 📁 Notebooks
+ ┣ 📄 README.md
+ ┗ 🖼 fraud_dashboard.png
+ 
+🧠 What Makes This Project Stand Out
 
-Automated Reporting: Integrated the Python model output into Power BI to replace manual risk assessment.
+✔ Combines Machine Learning + BI Dashboard
+✔ Solves real-world financial problem
+✔ Focuses on business impact, not just code
+✔ Designed like an industry-level Deloitte-style project
+
+📬 Connect With Me
+💼 LinkedIn: 
+💻 GitHub:
+⭐ If you like this project
+
+Give it a ⭐ on GitHub — it motivates me to build more real-world analytics projects!
